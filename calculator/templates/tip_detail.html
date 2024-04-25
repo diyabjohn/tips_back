@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Detail</title>
+</head>
+<body>
+    <h1>Tip Calculation Details</h1>
+    <p><strong>Bill Amount:</strong> ${{ bill_amount }}</p>
+    <p><strong>Tip Percentage:</strong> {{ tip_percentage }}%</p>
+    <p><strong>Total Tip:</strong> ${{ total_tip }}</p>
+    <p><strong>Total Amount:</strong> ${{ total_amount }}</p>
+    <p><a href="{% url 'tip-form' %}">Calculate Another Tip</a></p>
+</body>
+</html>

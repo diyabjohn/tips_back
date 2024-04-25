@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator - Calculate Tip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="number"] {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .calculate-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculate Tip</h1>
+        <form action="/tip_form/" method="post">
+            {% csrf_token %}
+            <label for="bill_amount">Bill Amount:</label><br>
+            <input type="number" id="bill_amount" name="bill_amount" step="0.01" required><br>
+            <label for="tip_percentage">Tip Percentage:</label><br>
+            <input type="number" id="tip_percentage" name="tip_percentage" step="0.01" required><br>
+            <button class="calculate-btn" type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
